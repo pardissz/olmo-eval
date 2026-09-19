@@ -716,6 +716,9 @@ caches, so the data must already be staged:
 export MOLMO_DATA_DIR=/weka/oe-training-default/mm-olmo  # this is the default
 ```
 
+A missing data root fails at task setup with the variable named, rather than
+reading a nonexistent path (the Ai2 defaults are tracked for removal in #381).
+
 Images live under `$MOLMO_DATA_DIR/torch_datasets/`. Manifests that recorded
 absolute paths on another machine are re-anchored under the current root
 automatically.
